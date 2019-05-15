@@ -58,8 +58,7 @@ class Dataset(lib_util.Factory):
     data_path = os.path.join(tf.resource_loader.get_data_files_path(),
                              self.basepath, "%s.npz" % self.name)
     print("Loading data from", data_path)
-    with open(data_path, "r") as p:
-      self.data = np.load(p)[fold]
+    self.data = np.load(data_path)[fold]
 
   @property
   def name(self):
@@ -136,10 +135,10 @@ class Dataset(lib_util.Factory):
 
 def get_dataset(basepath, hparams, fold):
   """Factory for Datasets."""
-  return Dataset.make('Concerto', basepath, hparams, fold)
+  return Dataset.make(hparams.dataset, basepath, hparams, fold)
 
 class Concerto(Dataset):
-    key = 'Concerto'
+    key = "Concerto"
     min_pitch = 0
     max_pitch = 350
     shortest_duration = 0.125
@@ -153,7 +152,6 @@ class Jsb16thSeparated(Dataset):
   shortest_duration = 0.125
   num_instruments = 4
   qpm = 60
-
 
 class TestData(Dataset):
   key = "TestData"
