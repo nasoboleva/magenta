@@ -19,9 +19,9 @@ from __future__ import print_function
 
 import os
 
-from magenta.models.coconet import lib_mask
-from magenta.models.coconet import lib_pianoroll
-from magenta.models.coconet import lib_util
+from coconet import lib_mask
+from coconet import lib_pianoroll
+from coconet import lib_util
 import numpy as np
 import tensorflow as tf
 
