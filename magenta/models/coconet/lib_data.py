@@ -136,7 +136,7 @@ class Dataset(lib_util.Factory):
 
 def get_dataset(basepath, hparams, fold):
   """Factory for Datasets."""
-  return Dataset.make(hparams.dataset, basepath, hparams, fold)
+  return Dataset.make('Concerto', basepath, hparams, fold)
 
 class Concerto(Dataset):
     key = "TestData"

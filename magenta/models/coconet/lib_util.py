@@ -201,7 +201,6 @@ class Factory(object):
       KeyError: if key is not a child subclass of cls.
     """
     for subklass in deepsubclasses(cls):
-      print(subclass)
       if subklass.key == key:
         return subklass(*args, **kwargs)
 
