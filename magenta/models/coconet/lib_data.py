@@ -139,7 +139,7 @@ def get_dataset(basepath, hparams, fold):
   return Dataset.make('Concerto', basepath, hparams, fold)
 
 class Concerto(Dataset):
-    key = "TestData"
+    key = 'Concerto'
     min_pitch = 0
     max_pitch = 350
     shortest_duration = 0.125
