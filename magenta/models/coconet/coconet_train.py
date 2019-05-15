@@ -44,7 +44,7 @@ flags.DEFINE_bool('log_progress', True,
 
 # Dataset.
 flags.DEFINE_string('dataset', None,
-                    'Choices: Jsb16thSeparated, MuseData, Nottingham, '
+                    'Choices: Jsb16thSeparated, MuseData, Nottingham, Concerto, '
                     'PianoMidiDe')
 flags.DEFINE_float('quantization_level', 0.125, 'Quantization duration.'
                    'For qpm=120, notated quarter note equals 0.5.')
