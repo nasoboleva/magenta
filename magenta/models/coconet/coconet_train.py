@@ -20,10 +20,10 @@ from __future__ import print_function
 import os
 import time
 
-from coconet import lib_data
-from coconet import lib_graph
-from coconet import lib_hparams
-from coconet import lib_util
+import lib_data
+import lib_graph
+import lib_hparams
+import lib_util
 import numpy as np
 import tensorflow as tf
 

@@ -19,9 +19,9 @@ from __future__ import print_function
 
 import os
 
-from coconet import lib_mask
-from coconet import lib_pianoroll
-from coconet import lib_util
+import lib_mask
+import lib_pianoroll
+import lib_util
 import numpy as np
 import tensorflow as tf
 
