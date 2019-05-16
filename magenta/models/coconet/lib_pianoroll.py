@@ -47,7 +47,7 @@ class PianorollEncoderDecoder(object):
 
   def __init__(self,
                shortest_duration=0.125,
-               min_pitch=36,
+               min_pitch=0,
                max_pitch=350,
                separate_instruments=True,
                num_instruments=None,
@@ -65,6 +65,8 @@ class PianorollEncoderDecoder(object):
   def encode(self, sequence):
     """Encode sequence into pianoroll."""
     # Sequence can either be a 2D numpy array or a list of lists.
+    print(self.min_pitch,
+          self.max_pitch)
     print(isinstance(sequence, np.ndarray), sequence.shape)
     if (isinstance(sequence, np.ndarray) and sequence.ndim == 2) or (
         isinstance(sequence, list) and
