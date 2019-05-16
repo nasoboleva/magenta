@@ -175,7 +175,6 @@ class Batch(object):
           "lengths", each corresponding to a model placeholder. Each value
           is a sequence (i.e. a batch) of examples.
     """
-    print(kwargs.values())
     assert set(kwargs.keys()) == self.keys
     assert all(
         len(value) == len(list(kwargs.values())[0]) for value in kwargs.values())
