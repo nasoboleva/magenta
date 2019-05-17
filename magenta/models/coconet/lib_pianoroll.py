@@ -43,7 +43,7 @@ class PianorollEncoderDecoder(object):
 
   qpm = 120
   # Oboe, English horn, clarinet, bassoon, sounds better on timidity.
-  programs = [69, 70, 72, 71]
+  programs = [69, 70, 72, 71, 69, 70, 72, 71]
 
   def __init__(self,
                shortest_duration=0.125,
@@ -147,7 +147,7 @@ class PianorollEncoderDecoder(object):
                     end=(t + 1) * duration))
       notes = merge_held(notes)
 
-      instrument = pretty_midi.Instrument(program=self.programs[i] - 1)
+      instrument = pretty_midi.Instrument(program=programs[i] - 1)
       instrument.notes.extend(notes)
       midi_data.instruments.append(instrument)
     return midi_data
