@@ -54,6 +54,7 @@ class PianorollEncoderDecoder(object):
                quantization_level=None):
     assert num_instruments is not None
     self.shortest_duration = shortest_duration
+    self.programs = [69, 70, 72, 71, 69, 70, 72, 71]
     self.min_pitch = min_pitch
     self.max_pitch = max_pitch
     self.separate_instruments = separate_instruments
@@ -147,7 +148,7 @@ class PianorollEncoderDecoder(object):
                     end=(t + 1) * duration))
       notes = merge_held(notes)
 
-      instrument = pretty_midi.Instrument(program=programs[i] - 1)
+      instrument = pretty_midi.Instrument(program=self.programs[i] - 1)
       instrument.notes.extend(notes)
       midi_data.instruments.append(instrument)
     return midi_data
