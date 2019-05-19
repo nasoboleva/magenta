@@ -43,7 +43,7 @@ class PianorollEncoderDecoder(object):
 
   qpm = 120
   # Oboe, English horn, clarinet, bassoon, sounds better on timidity.
-  programs = [69, 70, 72, 71, 69, 70, 72, 71]
+  programs =  [40, 41, 42, 43, 6, 6]
 
   def __init__(self,
                shortest_duration=0.125,
@@ -54,7 +54,7 @@ class PianorollEncoderDecoder(object):
                quantization_level=None):
     assert num_instruments is not None
     self.shortest_duration = shortest_duration
-    self.programs = [69, 70, 72, 71, 69, 70, 72, 71]
+    self.programs = [40, 41, 42, 43, 6, 6]
     self.min_pitch = min_pitch
     self.max_pitch = max_pitch
     self.separate_instruments = separate_instruments
