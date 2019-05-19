@@ -58,7 +58,8 @@ class Dataset(lib_util.Factory):
     data_path = os.path.join(tf.resource_loader.get_data_files_path(),
                              self.basepath, "%s.npz" % self.name)
     print("Loading data from", data_path)
-    self.data = np.load(data_path)[fold]
+    with tf.gfile.Open(data_path, "r") as p:
+        self.data = np.load(data_path)[fold]
 
   @property
   def name(self):
